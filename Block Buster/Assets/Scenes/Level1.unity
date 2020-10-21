@@ -169,8 +169,8 @@ MonoBehaviour:
   maxPlayAreaWidth: 12
   minSpawnTime: 1
   maxSpawnTime: 10
-  blockVelocity: 1
-  difficultyFactor: 1000
+  blockVelocity: 0
+  difficultyFactor: 100
 --- !u!4 &1894137316
 Transform:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 3453180878310854226, guid: e7213ea679ca43e40aa440d2acd7eb77,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.029297
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3453180878310854226, guid: e7213ea679ca43e40aa440d2acd7eb77,
         type: 3}
@@ -474,7 +474,7 @@ PrefabInstance:
     - target: {fileID: 3180336819194043824, guid: 23dd0c417a624e54199f975a176efcab,
         type: 3}
       propertyPath: isAutoPlay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5048973830679790860, guid: 23dd0c417a624e54199f975a176efcab,
         type: 3}

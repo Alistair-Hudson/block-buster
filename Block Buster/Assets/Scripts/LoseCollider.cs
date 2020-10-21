@@ -11,7 +11,7 @@ public class LoseCollider : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        else if (collision.gameObject.GetComponent<Block>())
+        else
         {
             Destroy(collision.gameObject);
         }

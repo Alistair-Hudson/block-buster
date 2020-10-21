@@ -8,7 +8,7 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField] float maxPlayAreaWidth = 16f;
     [SerializeField] float minSpawnTime = 1f;
     [SerializeField] float maxSpawnTime = 10f;
-    [SerializeField] float blockVelocity = 5f;
+    [SerializeField] float blockVelocity = 0;
     [SerializeField] float difficultyFactor = 1000f;
 
     GameStatus gameStatus;

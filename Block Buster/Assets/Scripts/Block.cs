@@ -29,9 +29,10 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Paddle>() || !gStatus.GetHasStarted())
+        if (GetComponent<Collider2D>().IsTouchingLayers(LayerMask.GetMask("Paddle")) || !gStatus.GetHasStarted())
         {
             SceneManager.LoadScene("GameOverScene");
+            return;
         }
         
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
