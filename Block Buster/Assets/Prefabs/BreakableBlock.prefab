@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4930467560323307430}
   - component: {fileID: 4930467560323307431}
   - component: {fileID: 4930467560323307429}
-  - component: {fileID: 4930467560323307428}
   - component: {fileID: 8955345154439972777}
+  - component: {fileID: -7309337696381958537}
   m_Layer: 0
   m_Name: BreakableBlock
   m_TagString: Breakable
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a07f9217b299190428f8484dc8d71a1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8cf0c1b63b8b1b46b64148ff0238c6d, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -109,25 +109,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &4930467560323307428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4930467560323307424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0b942eee8860dd4498a46a84049f05d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakSound: {fileID: 8300000, guid: cfec1dd43474a37479740c75fd663161, type: 3}
-  blockBreakVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
-  vfxTime: 2
-  hitSprites:
-  - {fileID: 21300000, guid: a07f9217b299190428f8484dc8d71a1b, type: 3}
-  points: 50
-  timesHit: 0
 --- !u!50 &8955345154439972777
 Rigidbody2D:
   serializedVersion: 4
@@ -149,3 +130,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7309337696381958537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4930467560323307424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0b942eee8860dd4498a46a84049f05d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakSound: {fileID: 8300000, guid: cfec1dd43474a37479740c75fd663161, type: 3}
+  blockBreakVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
+  vfxTime: 2
+  hitSprites:
+  - {fileID: 21300000, guid: f8cf0c1b63b8b1b46b64148ff0238c6d, type: 3}
+  points: 50
+  timesHit: 0

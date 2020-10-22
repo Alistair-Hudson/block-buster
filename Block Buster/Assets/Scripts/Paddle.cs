@@ -8,6 +8,7 @@ public class Paddle : MonoBehaviour
     [SerializeField] Projectile projectile;
     [SerializeField] float screenWidthInUnits = 16f;
     [SerializeField] float projectileSpeed = 5f;
+    [SerializeField] int shootingPenalty = -5;
 
 
     // Cahed Data
@@ -31,6 +32,7 @@ public class Paddle : MonoBehaviour
         {
             Projectile newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
             newProjectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+            gameStatus.AddPoints(shootingPenalty);
         }
     }
 
@@ -41,5 +43,10 @@ public class Paddle : MonoBehaviour
             return ball.transform.position.x;
         }
         return Input.mousePosition.x / Screen.width * screenWidthInUnits;
+    }
+
+    public void SetProjectile(Projectile newProjectile)
+    {
+        projectile = newProjectile;
     }
 }

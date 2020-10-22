@@ -11,6 +11,7 @@ public class GameStatus : MonoBehaviour
     [SerializeField] int basePointsPerBlock = 83;
     [SerializeField] Text scoreText;
     [SerializeField] bool isAutoPlay;
+    float scoreTick = 1;
 
     // State Variables
     [SerializeField] int gameScore = 0;
@@ -40,6 +41,11 @@ public class GameStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (0 <= gameSpeed && 0 >= (scoreTick -= Time.deltaTime))
+        {
+            ++gameScore;
+            scoreTick = 1;
+        }
         Time.timeScale = gameSpeed;
         scoreText.text = gameScore.ToString();
 
@@ -73,5 +79,10 @@ public class GameStatus : MonoBehaviour
     public void SetHasStarted(bool state)
     {
         hasStarted = state;
+    }
+
+    public void SetGameSpeed(float newGameSpeed)
+    {
+        gameSpeed = newGameSpeed;
     }
 }

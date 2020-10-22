@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a07f9217b299190428f8484dc8d71a1b, type: 3}
   - {fileID: 21300000, guid: 449884080a1f4cb4e97a85405d00fc27, type: 3}
   - {fileID: 21300000, guid: f8cf0c1b63b8b1b46b64148ff0238c6d, type: 3}
-  points: 100
+  points: 125
   timesHit: 0
 --- !u!50 &3647127498695923278
 Rigidbody2D:

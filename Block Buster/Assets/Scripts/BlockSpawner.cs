@@ -15,7 +15,6 @@ public class BlockSpawner : MonoBehaviour
 
     IEnumerator Start()
     {
-        Debug.Log(Random.Range(5, 2));
         gameStatus = FindObjectOfType<GameStatus>();
 
         float xPos = transform.position.x + Random.Range(1f, maxPlayAreaWidth - 1f);

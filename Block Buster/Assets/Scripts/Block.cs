@@ -32,6 +32,7 @@ public class Block : MonoBehaviour
         if (GetComponent<Collider2D>().IsTouchingLayers(LayerMask.GetMask("Paddle")) || !gStatus.GetHasStarted())
         {
             SceneManager.LoadScene("GameOverScene");
+            FindObjectOfType<GameStatus>().SetGameSpeed(0);
             return;
         }
         
