@@ -9,6 +9,8 @@ public class Paddle : MonoBehaviour
     [SerializeField] float screenWidthInUnits = 16f;
     [SerializeField] float projectileSpeed = 5f;
     [SerializeField] int shootingPenalty = -5;
+    Projectile tempProjectile;
+    int tempShotsRemaining;
 
 
     // Cahed Data
@@ -30,7 +32,18 @@ public class Paddle : MonoBehaviour
         transform.position = paddlePos;
         if (Input.GetButtonDown("Fire1"))
         {
-            Projectile newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+            Projectile projectilePrefab = projectile;
+
+            if (tempProjectile)
+            {
+                projectilePrefab = tempProjectile;
+                --tempShotsRemaining;
+                if (0 >= tempShotsRemaining)
+                {
+                    tempProjectile = null;
+                }
+            }
+            Projectile newProjectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             newProjectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
             gameStatus.AddPoints(shootingPenalty);
         }
@@ -45,8 +58,9 @@ public class Paddle : MonoBehaviour
         return Input.mousePosition.x / Screen.width * screenWidthInUnits;
     }
 
-    public void SetProjectile(Projectile newProjectile)
+    public void SetProjectile(Projectile newProjectile, int numShots)
     {
-        projectile = newProjectile;
+        tempProjectile = newProjectile;
+        tempShotsRemaining = numShots;
     }
 }

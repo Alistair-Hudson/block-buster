@@ -46,6 +46,7 @@ MonoBehaviour:
   powerups:
   - {fileID: 6478391964935567939, guid: a78b2aae7bacadc4d99af839c46928e8, type: 3}
   - {fileID: 6478391964935567939, guid: d0d84478b0abe6e4b953c9d661729b15, type: 3}
+  - {fileID: 6478391964935567939, guid: dc52c0ecdc02fdd419bd5e9fcdc12c6a, type: 3}
   maxPlayAreaWidth: 16
   minSpawnTime: 1
   maxSpawnTime: 30

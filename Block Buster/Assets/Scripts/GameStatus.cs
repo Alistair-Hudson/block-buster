@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameStatus : MonoBehaviour
 {
@@ -41,7 +42,9 @@ public class GameStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (0 <= gameSpeed && 0 >= (scoreTick -= Time.deltaTime))
+        if (0 <= gameSpeed && 
+            0 >= (scoreTick -= Time.deltaTime) && 
+            hasStarted)
         {
             ++gameScore;
             scoreTick = 1;
@@ -84,5 +87,11 @@ public class GameStatus : MonoBehaviour
     public void SetGameSpeed(float newGameSpeed)
     {
         gameSpeed = newGameSpeed;
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOverScene");
+        SetGameSpeed(0);
     }
 }

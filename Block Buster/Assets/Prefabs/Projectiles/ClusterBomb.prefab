@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 1401586891951392697}
   - component: {fileID: 6790335924556401167}
   - component: {fileID: 8703107813784391772}
+  - component: {fileID: -4720921611418699939}
   m_Layer: 0
-  m_Name: Projectile 1
+  m_Name: ClusterBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,3 +133,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f55b45e09d20748a2cb5ace2d48970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4720921611418699939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983168109255959720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b910f969033bc4398ee8a6595465fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombPrefab: {fileID: 8703107813784391772, guid: 2fa45c6f2c494534ca98363ce785302a,
+    type: 3}
+  numOfBombs: 8
+  projectileSpeed: 5

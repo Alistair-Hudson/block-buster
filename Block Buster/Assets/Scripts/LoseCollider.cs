@@ -9,7 +9,7 @@ public class LoseCollider : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Ball>())
         {
-            SceneManager.LoadScene("GameOverScene");
+            FindObjectOfType<GameStatus>().GameOver();
         }
         else
         {

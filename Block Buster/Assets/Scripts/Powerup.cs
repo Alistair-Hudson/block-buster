@@ -7,6 +7,7 @@ public class Powerup : MonoBehaviour
     [SerializeField] int points = 100;
     [SerializeField] Projectile projectile;
     [SerializeField] GameObject effect;
+    [SerializeField] int numShots = 0;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class Powerup : MonoBehaviour
 
         if (projectile)
         {
-            FindObjectOfType<Paddle>().SetProjectile(projectile);
+            FindObjectOfType<Paddle>().SetProjectile(projectile, numShots);
         }
         
         if (effect)

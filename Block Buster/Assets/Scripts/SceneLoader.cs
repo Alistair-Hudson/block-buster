@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    string CREDITS_HANDLER = "Credits";
+
     public void LoadNextScene()
     {
         int current_scene = SceneManager.GetActiveScene().buildIndex;
@@ -14,11 +16,20 @@ public class SceneLoader : MonoBehaviour
     public void LoadFirstScene()
     {
         SceneManager.LoadScene(0);
-        FindObjectOfType<GameStatus>().ResetScore();
+        GameStatus gameStatus = FindObjectOfType<GameStatus>();
+        if (gameStatus)
+        {
+            gameStatus.ResetScore();
+        }
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene(CREDITS_HANDLER);
     }
 }
